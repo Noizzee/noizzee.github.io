@@ -1,0 +1,55 @@
+/*Variables*/
+:root {
+    --primary: #867C7F;
+    --light: #FFFFFF;
+    --dark: #1E0E13;
+}
+
+/*Global Selectors*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background: #CCC3C5;
+    line-height: 1.2;
+}
+
+img {
+    width: 100%;
+}
+
+/*Navigation*/
+.main-nav {
+    background: var(--primary);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    padding: 1.2rem 2rem;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.main-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*About Container*/
+.about-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+}
