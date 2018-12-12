@@ -3,12 +3,14 @@
     --primary: #867C7F;
     --light: #FFFFFF;
     --dark: #1E0E13;
+    --shadow: 0px 2px 5px rgba(104, 104, 104, 0.8);
 }
 
 /*Global Selectors*/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -26,6 +28,7 @@ img {
 .main-nav {
     background: var(--primary);
     border-radius: 0 0 25px 25px;
+    box-shadow: var(--shadow);
 }
 
 .main-nav ul {
@@ -74,8 +77,13 @@ img {
 /*Skills Container*/
 .skills-container {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 1.2rem;
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 1.2rem;
+}
+
+.fa-html5, .fa-css3-alt, .fa-js-square {
+    color: var(--dark);
 }
 
 .skill-card {
@@ -85,4 +93,69 @@ img {
     background: var(--light);
     padding: 1.5rem;
     text-align: center;
+    border-radius: 20px;
+}
+
+.bar-container {
+    background: var(--primary);
+    width: 100%;
+}
+
+.bar {
+    text-align: right;
+    color: var(--light);
+    padding: 10px;
+}
+
+.html {
+    background: var(--dark);
+    width: 60%;
+}
+
+.css {
+    background: var(--dark);
+    width: 50%;
+}
+
+.java {
+    background: var(--dark);
+    width: 10%;
+}
+
+/*Contact*/
+.contact {
+    margin: 1.2rem 0;
+}
+
+.contact ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+/*Projects*/
+.projects {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 1.2rem;
+}
+
+.project-card {
+    background: var(--primary);
+    padding: 1.2rem;
+    border-radius: 20px;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--light);
 }
