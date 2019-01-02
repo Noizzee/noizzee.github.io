@@ -1,8 +1,22 @@
+/*Animations*/
+@keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
 /*Variables*/
 :root {
-    --primary: #687EF4;
-    --light: #8D99D7;
-    --dark: #0B102F;
+    --primary: #379683;
+    --light: #edf5e1;
+    --dark: #05386b;
+    --mainFont: 'Thasadith', sans-serif;
+    --secondFont: 'Merriweather', serif;
     --shadow: 0px 2px 5px rgba(104, 104, 104, 0.8);
 }
 
@@ -14,9 +28,10 @@
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
-    background: #A1AFF7;
+    font-family: var(--secondFont);
+    background: #5cdb95;
     line-height: 1.5;
+    color: var(--light);
 }
 
 img {
@@ -24,13 +39,31 @@ img {
     height: 100%;
 }
 
+h1 {
+    font-family: var(--mainFont);
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+h3 {
+    font-family: var(--mainFont);
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+}
+
 /*Navigation*/
 .main-nav {
     background: var(--primary);
     box-shadow: var(--shadow);
-    position: fixed;
-    top: 0;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
 }
 
@@ -63,16 +96,35 @@ img {
 .about-container {
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-image: url(/img/demoimage.png);
+    justify-content: flex-end;
+    background-image: url(/img/showcase.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    margin-top: 10vh;
+    height: 90vh;
     padding: 2rem;
+    margin: 0;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40%;
+}
+
+.myIcon {
+    font-size: 2rem;
+}
+
+.iconContainer a {
+    color: var(--light);
 }
 
 /*Skills Container*/
