@@ -212,7 +212,16 @@ h3 {
 .project-card-content {
     text-align: center;
     color: var(--dark);
-    padding: 1.2rem;
+}
+
+.project-card-content a {
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.2s ease-in;
+}
+
+.project-card-content a:hover {
+    color: var(--primary);
 }
 
 /*Footer*/
